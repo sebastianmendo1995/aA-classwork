@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My recipe</title>
+</head>
+<body>
+    <header>
+        <h1>Mouth watering grilled cheese</h1>
+        <nav>
+            <ul>
+                <a href="#description">Description</a>
+                <a href="#ingredients">Ingredients</a>
+                <a href="#directions">Directions</a>
+            </ul>
+        </nav>
+        
+        <img src="https://pbs.twimg.com/profile_images/378800000699275845/28983bbc0ac0a12cde1c0dc3fc818b4b_400x400.png" height=100/>
+    </header> 
+    <section>
+        <a name="description">
+            <h2>Description</h2>
+        </a>
+        <p>A grilled cheese sandwich is a delicious toasty sandwish made with one or more varieties of cheese and bread. Prepare
+            by heating cheese between slices of bread on a griddle until the bread browns and the cheese melts.</p>
+        <figure>
+            <img
+                src="https://assets.bonappetit.com/photos/57acf62a53e63daf11a4dbee/1:1/w_414,h_414,c_limit/best-ever-grilled-cheese.jpg" />
+            <figcaption><a href="https://en.wikipedia.org/wiki/Grilled_cheese">Grilled cheese sandwich</a></figcaption>
+        </figure>
+        
+        <aside>
+            <h2>Ingredients</h2> <a name="ingredients" />
+            <ul>
+                <li>Sliced cheddar cheese</li>
+                <li>Sliced havarti</li>
+                <li>Whole lot of butter</li>
+                <li>Sliced sourdough bread</li>
+            </ul>
+        </aside>
+        
+        
+        <a name="directions">
+            <h2>Directions</h2>
+        </a>
+        <ol>
+            <li>Heat butter in griddle</li>
+            <li>Place cheese between sourdough bread</li>
+            <li>Place in griddle on medium heat</li>
+            <li>Check frequently until golden-brown, then flip</li>
+            <li>Cook other side of sandwich</li>
+            <li>Enjoy!</li>
+        </ol>
+    </section>
+    <section>
+        <form>
+            <label for = "name">name</label>
+            <input type="text" id = "name"> 
+            <label> rating</label>
+
+            <input type="radio" id="1" name="rating" value="1" checked>
+            <label for="1">1</label>
+            <input type="radio" id="2" name="rating" value="2">
+            <label for="2">2</label>
+            <input type="radio" id="3" name="rating" value="3">
+            <label for="3">3</label>
+            <input type="radio" id="4" name="rating" value="4">
+            <label for="4">4</label>
+            <input type="radio" id="5" name="rating" value="5">
+            <label for="5">5</label>
+
+            <label for="Cooking Expertise">Cooking Expertise</label>
+            <select name="Cooking Expertise" id="Cooking Expertise">
+                <option value="" selected="selected" disabled>--Select Cooking Expertise--</option>
+                <option value="Sometimes Cook">Sometimes Cook</option>
+                <option value="Cook Everyday" selected>Cook Everyday</option>
+                <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+                <option value="Professional Chef">Professional Chef</option>
+            </select>
+
+            <label for="review">Review</label>
+            <textarea rows="4" cols="50" name="review" id="review"></textarea>
+
+        </form>
+
+        <footer>
+            <p>Grilled cheese originated in the jungles of the <a href="https://en.wikipedia.org/wiki/San_Fernando_Valley">San
+                    Fernando Valley</a>. Overworked soccer moms needed a quick way to feed an entire troop of soccer players.
+                One mom discovered that she always had cheese and bread in her purse. She decided to throw it on the stove, and
+                added a dollop of butter for good measure; thus, the grilled cheese was born.</p>
+                
+        </footer>
+    </section>
+
+    <p>Brought to you by a couple of hungry coding students.</p>
+</body>
+</html>
