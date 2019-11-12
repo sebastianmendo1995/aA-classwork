@@ -1,6 +1,6 @@
 class PolyTreeNode
     attr_reader :value, :parent, :children
-    
+
     def initialize(val)
         @value = val
         @parent = nil
@@ -20,8 +20,9 @@ class PolyTreeNode
     def remove_child(child)
         if !@children.include?(child)
             raise 'Not my child'
+        else
+            child.parent = nil
         end
-        child.parent = nil
     end
 
     def dfs(target)
