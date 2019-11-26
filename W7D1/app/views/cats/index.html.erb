@@ -1,0 +1,14 @@
+<h1>Cats upon cats!</h1>
+
+<% unless logged_in? %>
+  <form action="<%= new_session_url %>" method="GET">
+    <input type="submit" value= "Log In" />
+  </form>
+<% end %>
+<ul>
+  <% @cats.each do |cat| %>
+    <li><a href="<%= cat_url(cat) %>"><%= cat.name %></a></li>
+  <% end %>
+</ul>
+
+<a href="<%= new_cat_url %>">Create cat</a>
