@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SuperGoals</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <h1> GOALING APP </h1>
+
+    <ul>
+
+      <% if current_user %>
+        <li><a href="<%= new_session_url %>"> Log Out </a></li>
+      <% else %>
+        <li><a href="<%= new_user_url %>"> Sign Up </a></li>
+        <li><a href="<%= new_session_url %>"> Log In </a></li>
+      <% end %>
+
+    </ul>
+
+    <%= yield %>
+  </body>
+</html>

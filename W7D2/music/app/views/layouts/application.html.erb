@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+    <title>Music</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <style>
+    body h1{
+      font-family: 'Baskervville', serif;
+    }
+    header, header ul{
+      display: flex;
+    }
+
+    header ul {
+      list-style: none;
+      align-items: center;
+    }
+
+    header ul li{
+      padding: 10px;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 20px;
+    }
+
+    header {
+      justify-content: space-between;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>Music App</h1>
+      <ul>
+        <li><a href="<%= new_session_url %>">Log In</a></li>
+        <li><a href="<%= new_user_url %>">Sign Up</a></li>
+        <li><a href="">Log Out</a></li>
+      </ul>
+    </header>
+
+    <p>Enjoy the best music with us</p>
+    <%= yield %>
+  </body>
+</html>

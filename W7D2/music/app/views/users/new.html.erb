@@ -1,0 +1,76 @@
+
+<style>
+
+    .sign_up_form {
+        margin: auto;
+        width: 50%;
+        /* text-align: center; */
+        padding: 10px;
+        background: black opacity: 0.2;
+    }
+
+    .sign_up_form label{
+        align-items: left;
+    }
+
+    input[type=email], input[type=password] {
+        background: transparent;
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        border-bottom: 2px solid red;
+    }
+    input[type=submit] {
+        background-color: white;
+        color: black;
+        size: 50px;
+        border: 2px solid #008CBA; /* Green */
+        size: 100px;
+        width: 100px;
+        font-size: 15px;
+    }
+
+    #cancel {
+        border: 2px solid #f44336;
+    }
+
+    #cancel:hover{
+        background-color: #f44336;
+    }
+
+    input[type=submit]:hover {
+        background-color: #008CBA; /* Green */
+        color: white;
+    }
+    
+    .sign_up_form label {
+        color: #008CBA;
+        font-weight: bold;
+        width: 150px;
+    }
+</style>
+<div class='sign_up_form'>
+    <h2>Create your Account</h2>
+    <form action="<%= users_url %>" method="POST">
+        <%= auth_token %>
+        
+        <label>Email
+            <br>
+            <input type="email" name="user[email]">
+        </label>
+        <br>
+        <label>Password
+            <br>
+            <input type="password" name="user[password]">
+        </label>
+        <br>
+        <% if flash[:errors] %>
+            <p><%= flash[:errors].join(", ") %></p>
+            <br>
+        <% end %>
+        <input id="cancel" type="submit" value="Cancel">
+        <input type="submit" value="Sign Up">
+        
+    </form>
+</div>
